@@ -1,0 +1,19 @@
+<h1><%= @book.title %></h1>
+<p><strong>Author:</strong> <%= @book.author %></p>
+<p><%= @book.description %></p>
+
+<h2>Borrowing History</h2>
+<ul>
+  <% @book.borrowings.each do |borrowing| %>
+    <li>
+      <%= borrowing.borrower %> borrowed on <%= borrowing.borrowed_at %>
+      <% if borrowing.returned_at %>
+        and returned on <%= borrowing.returned_at %>
+      <% else %>
+        <%= link_to 'Mark as Returned', return_borrowing_path(borrowing), method: :patch %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Borrow This Book', new_book_borrowing_path(@book) %>

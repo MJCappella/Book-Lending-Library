@@ -1,0 +1,8 @@
+<h1>Borrow <%= @book.title %></h1>
+<%= form_with model: [@book, @borrowing] do |form| %>
+  <div>
+    <%= form.label :borrower, 'Your Name:' %>
+    <%= form.text_field :borrower %>
+  </div>
+  <%= form.submit 'Borrow' %>
+<% end %>
