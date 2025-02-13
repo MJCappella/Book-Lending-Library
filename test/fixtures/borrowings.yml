@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  book: one
+  borrower: MyString
+  borrowed_at: 2025-02-14 00:50:01
+  returned_at: 2025-02-14 00:50:01
+
+two:
+  book: two
+  borrower: MyString
+  borrowed_at: 2025-02-14 00:50:01
+  returned_at: 2025-02-14 00:50:01
